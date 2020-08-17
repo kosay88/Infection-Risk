@@ -27,6 +27,15 @@ for(var i=0; i<People.length; i++){
     };
 };
 
+//______________________________________________
+// Change an array to object:
+function toObject(arr) {
+    var rv = {};
+    for (var i = 0; i < arr.length; ++i)
+      rv[i] = arr[i];
+    return rv;
+  }
+
 //____________________________________________
 //Slice function to returns an array with arrays of the given size:
 //  @param myArray {Array} array to split
@@ -48,4 +57,40 @@ console.log(result);
 
 //______________________________________________
 //Formula:
-//var X = (People[0]-Infectors)*(1-Math.exp(-BR*(QUANTA*Infectors/(VRR*Volume))*(Time[0]+(1/VRR)*Math.exp(-VRR*Time[0])-(1/VRR))));
+//(People[0]-Infectors)*(1-Math.exp(-BR*(QUANTA*Infectors/(VRR*Volume))*(Time[0]+(1/VRR)*Math.exp(-VRR*Time[0])-(1/VRR))))
+
+//______________________________________________
+let mountains = [
+    { name: "Monte Falco", height: 1658, place: "Parco Foreste Casentinesi" },
+    { name: "Monte Falterona", height: 1654, place: "Parco Foreste Casentinesi" },
+    { name: "Poggio Scali", height: 1520, place: "Parco Foreste Casentinesi" },
+    { name: "Pratomagno", height: 1592, place: "Parco Foreste Casentinesi" },
+    { name: "Monte Amiata", height: 1738, place: "Siena" }
+  ];
+  
+  function generateTableHead(table, data) {
+    let thead = table.createTHead();
+    let row = thead.insertRow();
+    for (let key of data) {
+      let th = document.createElement("th");
+      let text = document.createTextNode(key);
+      th.appendChild(text);
+      row.appendChild(th);
+    }
+  }
+  
+  function generateTable(table, data) {
+    for (let element of data) {
+      let row = table.insertRow();
+      for (key in element) {
+        let cell = row.insertCell();
+        let text = document.createTextNode(element[key]);
+        cell.appendChild(text);
+      }
+    }
+  }
+  
+  let table = document.querySelector("table");
+  let data = Object.keys(result);
+  generateTableHead(table, Time);
+  generateTable(table, result);
