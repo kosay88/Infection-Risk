@@ -16,16 +16,22 @@ var BR = 0.54; var RR = 0; var Ventilation_Rate = VR * Volume;
 // Virus parameters:
 var QUANTA = 96; var Labda = 0.63; var Disp_Rate = 0.24; var VRR = Math.abs(VR*(RR-1)-Labda-Disp_Rate)
 
-//____________________________________________
-//Create an array with all the formulas output values:
-var AllOutputs_Arr = [];
-for(var i=0; i<People.length; i++){
-    for(var j=0; j<Time.length; j++){
-        var Formula_Output = (People[i]-Infectors)*(1-Math.exp(-BR*(QUANTA*Infectors/(VRR*Volume))*(Time[j]+(1/VRR)*Math.exp(-VRR*Time[j])-(1/VRR))));
-        AllOutputs_Arr.push(Formula_Output);
-//        console.log(X);
-    };
-};
+// _______________________________________________
+// Function to format dicimal number:
+function round(value, exp) {
+    if (typeof exp === 'undefined' || +exp === 0)
+      return Math.round(value);  
+    value = +value;
+    exp = +exp;  
+    if (isNaN(value) || !(typeof exp === 'number' && exp % 1 === 0))
+      return NaN; 
+    // Shift
+    value = value.toString().split('e');
+    value = Math.round(+(value[0] + 'e' + (value[1] ? (+value[1] + exp) : exp)));  
+    // Shift back
+    value = value.toString().split('e');
+    return +(value[0] + 'e' + (value[1] ? (+value[1] - exp) : -exp));
+  }
 
 //______________________________________________
 // Change an array to object:
@@ -35,6 +41,54 @@ function toObject(arr) {
       rv[i] = arr[i];
     return rv;
   }
+
+//____________________________________________
+//Create an array with all the formulas output values for Risk:
+var AllOutputs_Risk_Arr = [];
+for(var i=0; i<People.length; i++){
+    for(var j=0; j<Time.length; j++){
+        var Formula_Output = round((People[i]-Infectors)*(1-Math.exp(-BR*(QUANTA*Infectors/(VRR*Volume))*(Time[j]+(1/VRR)*Math.exp(-VRR*Time[j])-(1/VRR)))) ,2);
+        //set color value:
+        var tempColor="";
+        if(Formula_Output<0.0625) {
+            var tempColor = "color1";
+        } else if(Formula_Output<0.1250) {
+            var tempColor = "color2";
+        }else if(Formula_Output<0.1875) {
+            var tempColor = "color3";
+        }else if(Formula_Output<0.2500) {
+            var tempColor = "color4";
+        }else if(Formula_Output<0.3125) {
+            var tempColor = "color5";
+        }else if(Formula_Output<0.3750) {
+            var tempColor = "color6";
+        }else if(Formula_Output<0.4375) {
+            var tempColor = "color7";
+        }else if(Formula_Output<0.5000) {
+            var tempColor = "color8";
+        }else if(Formula_Output<0.5625) {
+            var tempColor = "color9";
+        }else if(Formula_Output<0.6250) {
+            var tempColor = "color10";
+        }else if(Formula_Output<0.6875) {
+            var tempColor = "color11";
+        }else if(Formula_Output<0.7500) {
+            var tempColor = "color12";
+        }else if(Formula_Output<0.8125) {
+            var tempColor = "color13";
+        }else if(Formula_Output<0.8750) {
+            var tempColor = "color14";
+        }else if(Formula_Output<0.9375) {
+            var tempColor = "color15";
+        } else {
+            var tempColor = "color16";
+        };
+        
+        AllOutputs_Risk_Arr.push(tempColor);
+        // AllOutputs_Risk_Arr.push(Formula_Output);
+//        console.log(X);
+    };
+};
 
 //____________________________________________
 //Slice function to returns an array with arrays of the given size:
@@ -52,22 +106,11 @@ function chunkArray(myArray, chunk_size){
     return tempArray;
 }
 // Split in group of Time array length items:
-var result = chunkArray(AllOutputs_Arr, Time.length);
+var result = chunkArray(AllOutputs_Risk_Arr, Time.length);
 console.log(result);
 
 //______________________________________________
-//Formula:
-//(People[0]-Infectors)*(1-Math.exp(-BR*(QUANTA*Infectors/(VRR*Volume))*(Time[0]+(1/VRR)*Math.exp(-VRR*Time[0])-(1/VRR))))
-
-//______________________________________________
-let mountains = [
-    { name: "Monte Falco", height: 1658, place: "Parco Foreste Casentinesi" },
-    { name: "Monte Falterona", height: 1654, place: "Parco Foreste Casentinesi" },
-    { name: "Poggio Scali", height: 1520, place: "Parco Foreste Casentinesi" },
-    { name: "Pratomagno", height: 1592, place: "Parco Foreste Casentinesi" },
-    { name: "Monte Amiata", height: 1738, place: "Siena" }
-  ];
-  
+// Create table:  
   function generateTableHead(table, data) {
     let thead = table.createTHead();
     let row = thead.insertRow();
@@ -86,6 +129,7 @@ let mountains = [
         let cell = row.insertCell();
         let text = document.createTextNode(element[key]);
         cell.appendChild(text);
+        cell.className = element[key];
       }
     }
   }
