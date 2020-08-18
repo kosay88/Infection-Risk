@@ -1,4 +1,83 @@
-#table_div{
-  background-color: red;
-  color: blue;
+#chart, th{
+    font-size: 8px;
+    height: 20px;
+}
+
+#chart, td{
+    font-size: 10px;
+    padding: 0%;
+    width: 500px;
+    height: 30px;
+}
+
+table {
+    /* background-color: orange; */
+    width: 1000px;
+    height: 1000px;
+}
+
+/* Charts colors: */
+.color1, td{
+    color: rgb(0, 0, 0, 0%);
+    background-color: rgb(0, 176, 80 );
+}
+.color2, td{
+    color: rgb(0, 0, 0, 0%);
+    background-color: rgb(35, 178, 70 );
+}
+.color3, td{
+    color: rgb(0, 0, 0, 0%);
+    background-color: rgb(70, 180, 60);
+}
+.color4, td{
+    color: rgb(0, 0, 0, 0%);
+    background-color: rgb(105, 182, 50);
+}
+.color5, td{
+    color: rgb(0, 0, 0, 0%);
+    background-color: rgb(140, 184, 40);
+}
+.color6, td{
+    color: rgb(0, 0, 0, 0%);
+    background-color: rgb(175, 186, 30);
+}
+.color7, td{
+    color: rgb(0, 0, 0, 0%);
+    background-color: rgb(210, 188, 20);
+}
+.color8, td{
+    color: rgb(0, 0, 0, 0%);
+    background-color: rgb(245, 190, 10);
+}
+.color9, td{
+    color: rgb(0, 0, 0, 0%);
+    background-color: rgb(248, 172, 0);
+}
+.color10, td{
+    color: rgb(0, 0, 0, 0%);
+    background-color: rgb(240, 156, 0);
+}
+.color11, td{
+    color: rgb(0, 0, 0, 0%);
+    background-color: rgb(231, 130, 0);
+}
+.color12, td{
+    color: rgb(0, 0, 0, 0%);
+    background-color: rgb(224, 104, 0);
+}
+.color13, td{
+    color: rgb(0, 0, 0, 0%);
+    background-color: rgb(216,78, 0);
+}
+.color14, td{
+    color: rgb(0, 0, 0, 0%);
+    background-color: rgb(208, 52, 0);
+}
+.color15, td{
+    color: rgb(0, 0, 0, 0%);
+    background-color: rgb(200, 26, 0);
+}
+.color16, td{
+    color: rgb(0, 0, 0, 0%);
+    background-color: rgb(192, 0, 0);
 }
