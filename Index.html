@@ -3,16 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="Style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <title>Infection Risk</title>
+    <script src="Index.JS"></script>
 </head>
 <body>
-<h1>Infection Risk app!</h1>
+    <h1>Infection Risk app!</h1>
 
-<table id="chart"></table>
-<script src="Index.JS"></script>
+    <a href="Charts.html">To chart</a>
+
+    <form id="Form" action="/Charts.html">
+        <p>Room width: </p>
+        <input id="Room_Width" type="number" min="1" name="Room_width" value="" required>
+        <p>Room depth: </p>
+        <input id="Room_Depth" type="number" min="1" name="Room_depth" value="" required>
+        <p>Room height: </p>
+        <input id="Room_Height" type="number" min="1" name="Room_height" value="" required>
+        <button type="button" name="submit" value="Submit" onclick="GetInputValues(); location.href='/Charts.html'">Calculate risk</button>
+    </form>
 
 </body>
 </html>
