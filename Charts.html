@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <title>Infection Risk</title>
+    <script src="IndexRisk.JS"></script>
+    <script src="IndexCO2.JS"></script>
+</head>
+<body onload="CreateChartRisk(); CreateChartCO2();">
+<h1>Infection Risk charts!</h1>
+
+<a href="Index.html">To Home</a>
+
+<div id="Cover"></div>
+
+<div class="Container">
+    <div id="People_risk" style="list-style-type: none;"></div>
+    <table class="chart" id="chart_risk">
+        <h3>Secondary infection risk</h3>
+        <p> Meeting duration (hours)</p>    
+        <p># of people in the meeting room</p>
+    </table>
+    <div id="People_CO2" style="list-style-type: none;"></div>
+    <table class="chart" id="chart_CO2">
+        <h3>CO2 level (PPM)</h3>
+        <p> Meeting duration (hours)</p>
+        <p># of people in the meeting room</p>    
+    </table>
+</div>
+
+<script src="IndexRisk.JS"></script>
+<script src="IndexCO2.JS"></script>
+
+<!-- Input form within the chart page itself -->
+<!-- <form id="Form">
+    <p>Room width: </p>
+    <input id="Room_Width" type="number" name="Room_width" value="" required>
+    <p>Room height: </p>
+    <input id="Room_Height" type="number" name="Room_height" value="" required>
+    <p>Room depth: </p>
+    <input id="Room_Depth" type="number" name="Room_depth" value="" required>
+    <button type="button" name="submit" value="Submit" onclick="CreateChartRisk(); CreateChartCO2();">Calculate risk</button>
+</form> -->
+
+</body>
+</html>
