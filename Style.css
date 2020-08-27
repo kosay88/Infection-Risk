@@ -1,9 +1,40 @@
-#chart, th{
-    font-size: 8px;
-    height: 20px;
+body {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-#chart, td{
+#Cover {
+    background-color: rgb(0, 0, 0, 0%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.Container {
+    width: 100%;
+    height: 100%;
+}
+
+#people_risk, ul{
+    list-style-type: none;
+}
+#people_risk, li{
+    font-size: 10px;
+    padding: 10px;
+    margin-top: 70px;
+    margin-bottom: -70px;
+}
+
+.chart{
+    width: 500px;
+    margin-left: 65px;
+    margin-top: -520px;
+}
+.chart, th{
+    font: bold;
+    font-size: 10px;
+    height: 20px;
+}
+.chart, td{
     font-size: 10px;
     padding: 0%;
     width: 500px;
@@ -11,7 +42,6 @@
 }
 
 table {
-    /* background-color: orange; */
     width: 1000px;
     height: 1000px;
 }
