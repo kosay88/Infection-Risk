@@ -1,10 +1,11 @@
+// Get input values saved in the session:
 var storedArray = JSON.parse(sessionStorage.getItem("inputs"));//no brackets
 var i;
 for (i = 0; i < storedArray.length; i++) {
             //  console.log(storedArray[i]);
 }
 
-
+// _____________________________________________
 var Time = [0.25, 0.5, 0.75, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 6, 7, 8];
 var People = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
@@ -95,9 +96,8 @@ People.forEach(function (item) {
 
 // ___________________________________________
 // Inputs:
-var Room_Width = storedArray[0]; var Room_Depth = storedArray[1]; var Room_Height = storedArray[2];
-var VR = 3;
-console.log(Room_Width, Room_Depth, Room_Height);
+var Room_Width = storedArray[0]; var Room_Depth = storedArray[1]; var Room_Height = storedArray[2]; var VR = storedArray[3];
+console.log(Room_Width, Room_Depth, Room_Height, VR);
 
 // Case parameters:
 var Infectors = 1; var Area = Room_Width * Room_Depth; var Volume = Room_Height*Area;
@@ -162,7 +162,7 @@ for(var i=0; i<People.length; i++){
 //____________________________________________
 // Split in group of Time array length items:
 var result = chunkArray(AllOutputs_CO2_Arr, Time.length);
-// console.log(result);
+console.log(result);
 
 //______________________________________________
 
