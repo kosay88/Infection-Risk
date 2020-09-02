@@ -1,5 +1,126 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    display: flex; 
+    background-color: rgb(195, 212, 235, 9%)
+}
+
+:root {
+  --v: 100px;
+}
+
+/*   margin-left: calc(-1 * var(--v)); */
+.Menu{
+    width: var(--v);
+    height: 100vh;
+    padding: 10px 20px 10px 10px;
+    margin: 0%;
+    display: inline-block; 
+    float: left;
+    background-color: rgb(0, 71, 186, 1);
+    color: rgb(255, 255, 255, 1); 
+}
+#Logo{
+  width: 100%;
+  margin: 20px 0px 20px 0px;
+}
+.Menu a{
+    color: rgb(255, 255, 255, 1);
+  float: left;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 15px;
+}
+.Menu a:hover {
+  color: rgb(255, 255, 255, 50%);
+}
+
+/* Home page */
+.Home_content {
+    margin-top: 0%;
+    /*     padding: 0%; */
+    width: 70%;
+    height: 100%;
+    display: inline-block;
+/*     margin-left: calc(50px + var(--v)); */
+}
+#Form {
+    width: 100%;
+    margin-top: 20px;
+    margin-left: calc(10px + var(--v));    
+    padding: 10px 15px 15px 0px;
+    background-color: rgb(255, 255, 255, 1);
+    font-size: 15px;
+}
+.Inputs_divs{
+    width: 200px;
+    margin: 5px 0px 0px 20px;
+    display:inline-block;
+}
+.Inputs_divs input{
+    width: auto;
+}
+#Calculate-btm{
+    width: 150px;
+    padding: 5px;
+/*     height: 30px; */
+    margin: 5px 0px 0px 20px;
+    color: rgb(255, 255, 255, 1);
+    background-color: rgb(0, 71, 186, 1);
+    font-size: 15px;
+}
+#Calculate-btm:hover{
+    background-color: rgb(100, 118, 132, 1);
+}
+.Card_home{
+    width: 100%;
+/*     height: 100%; */
+    margin-top: 20px;
+    margin-left: calc(10px + var(--v));
+    padding: 0px 15px 15px 0px;
+    background-color: rgb(255, 255, 255, 1);
+        
+}
+.Info_div{
+    width: 25%;
+    height: 100%;
+    margin: 20px 100px 20px 80px;
+    display:inline-block;    
+/*     text-align: top; */
+    background-color: rgb(255, 255, 255, 1);    
+}
+.Info_div p{
+/*     font-size: 18px; */
+}
+.Img_div{
+    width: 50%;
+/*     height: 70%; */
+    margin: 20px 0px 20px 0px;
+    display:inline-block;
+    background-color: rgb(255, 255, 255, 1);        
+}
+#Home_Page_Image{
+/*     text-align: center; */
+/*     padding: 0px 15px 0px 15px; */
+    width: 70%;
+/*     height: 70%; */
+/*     display:inline-block; */
+    background-color: rgb(255, 255, 255, 1);    
+}
+/* Visualization page */
+.Visualization {
+/*     margin-top: 30px; */
+/*     margin-left: calc(10px + var(--v)); */
+    margin-top: 0%;
+    /*     padding: 0%; */
+        width: 70%;
+    height: 100%;
+    display: inline-block; 
+}
+.Container {
+/*     margin-top: 30px; */
+    width: 100%;
+    height: 100%;
+    display: inline-block; 
 }
 
 #Cover {
@@ -9,25 +130,28 @@ body {
     position: absolute;
 }
 
-.Container {
-    width: 100%;
-    height: 100%;
-}
-
-#people_risk, ul{
-    list-style-type: none;
-}
-#people_risk, li{
+.People_X, li{
+    width: 10px;
+    height: 10px;
     font-size: 10px;
-    padding: 10px;
-    margin-top: 70px;
-    margin-bottom: -70px;
+    padding: 11px;   
 }
-
-.chart{
-    width: 500px;
-    margin-left: 65px;
-    margin-top: -520px;
+.Charts_titles{
+    width: 100%;
+}
+.Charts_duration{
+    width: 100%;    
+}
+.charts{
+    width: 100%;
+    height: 400px;
+    margin: 0%;
+/*     margin-left: 185px; */
+/*     margin-top: 20px; */
+}
+.Charts_persons{
+    margin-top:460px;
+    width: 100%
 }
 .chart, th{
     font: bold;
@@ -40,12 +164,131 @@ body {
     width: 500px;
     height: 30px;
 }
+/* .chart, td:first-child{
+    width: 30%;
+} */
 
 table {
-    width: 1000px;
-    height: 1000px;
+    table-layout: fixed;
+/*     width: 1000px; */
+/*     height: 1000px; */
+}
+/* p {
+    margin-left: 200px;
+} */
+/* _________________________ */
+/* Risk style */
+#Risk_title{
+    width:50%;
+    display: inline-block; 
+/*     border: 1px solid;  */
+    float: left;
+    margin-left: 100px;
+}
+#Risk_duration{
+    width:50%;
+    display: inline-block; 
+/*     border: 1px solid;  */
+    float: left;
+    margin-left: 100px;
+}
+#Risk_div{
+    width:50%;
+    display: inline-block; 
+/*     border: 1px solid;  */
+    float: left;
+    margin-top: -10px;
+    margin-left: 60px;
+
+}
+#People_risk{
+    display: inline-block; 
+    float: left;    
+}
+#people_risk, ul{
+/*     margin-top: 140px; */
+/*     display: inline-block;  */
+/*     float: left; */
+    margin-left: -50px;
+    list-style-type: none;
+}
+/* #people_risk, .innercontents{ */
+/*     display: inline-block;  */
+/*     border: 1px solid;  */
+/*     float: left; */
+/*     margin-left: 200px; */
+/*     position: absolute; */
+/*     left: -200px; */
+/*     margin-left: -200px; */
+/*     background: red; */
+/*     margin-top: 70px; */
+/*     margin-bottom: -70px; */
+/* } */
+#chart_risk{
+    width:30%;
+    display: inline-block; 
+/*     border: 1px solid;  */
+/*     float: left; */
+/*     margin-left: 100px; */
+
+}
+#Risk_person{
+    width:50%;
+    display: inline-block; 
+/*     border: 1px solid;  */
+    float: left;
+/*     margin-top:; */
+    margin-left: 100px;
 }
 
+/* CO2 style */
+#CO2_title{
+    width:25%;
+    display: inline-block; 
+/*     border: 1px solid; */
+/*     margin-top: -150px; */
+/*     margin-left: 900px; */
+}
+#CO2_duration{
+    width:25%;
+    display: inline-block; 
+/*     border: 1px solid; */
+/*     margin-left: 900px; */
+}
+#CO2_div{
+    width:39%;
+    display: inline-block; 
+    margin-top: -10px;
+}
+#People_CO2{
+    display: inline-block; 
+    float: left;    
+}
+#People_CO2, ul{
+/*     margin-left: 120px; */
+/*     display: inline-block;  */
+/*     float: left; */
+    list-style-type: none;    
+}
+#People_CO2, .innercontents{
+/*     background: green; */
+/*     width:35%; */
+    display: inline-block; 
+/*     margin-left: 700px; */
+/*     margin-top: -680px; */
+}
+#chart_CO2 {
+    width:30%;
+    /* margin-top: -10px; */
+     display: inline-block; 
+/*     margin-left: 5%; */
+}
+#CO2_person{
+    width:25%;
+    display: inline-block; 
+}
+
+/* _________________________ */
 /* Charts colors: */
 .color1, td{
     color: rgb(0, 0, 0, 0%);
