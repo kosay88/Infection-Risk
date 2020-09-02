@@ -2,7 +2,10 @@
 function GetInputValues(){
     if (typeof(Storage) !== "undefined") {
 
-        var InputsArray = [document.getElementById("Room_Width").value, document.getElementById("Room_Depth").value, document.getElementById("Room_Height").value];
+        var InputsArray = [document.getElementById("Room_Width").value,
+                           document.getElementById("Room_Depth").value,
+                           document.getElementById("Room_Height").value,
+                           document.getElementById("Ventilation_Rate").value];
         window.sessionStorage.setItem("inputs", JSON.stringify(InputsArray));
         var storedArray = JSON.parse(sessionStorage.getItem("inputs"));//no brackets
         var i;
