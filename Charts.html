@@ -26,31 +26,39 @@
     <div class="Visualization">
         <div id="Cover"></div>
 
-        <div class="Charts_titles">
-            <h3 id="Risk_title">Secondary infection risk</h3>
-            <h3 id="CO2_title">CO2 level (PPM)</h3>    
-        </div>
+        <!-- <div class="Charts_titles">
+        </div> -->
     
-        <div class="Charts_duration">
-            <p id="Risk_duration"> Meeting duration (hours)</p>    
-            <p id="CO2_duration"> Meeting duration (hours)</p>
-        </div>
+        <!-- <div class="Charts_duration">
+        </div> -->
     
-        <div class="Charts">
             <div id="Risk_div">
-                <div class="People_X" id="People_risk" style="list-style-type: none;"></div>
-                <table class="chart" id="chart_risk"></table>
+                <h3 id="Risk_title">Secondary infection risk</h3>
+                <p id="Risk_duration"> Meeting duration (hours)</p>    
+                <div class="Charts">
+                    <div class="People_X" id="People_risk" style="list-style-type: none;"></div>
+                    <div>
+                        <table class="chart" id="chart_risk"></table>    
+                    </div>
+                </div>
+                <p id="Risk_person"># of people in the meeting room</p>
             </div>
+
             <div id="CO2_div">
-                <div class="People_X" id="People_CO2" style="list-style-type: none;"></div>    
-                <table class="chart" id="chart_CO2"></table>    
+                <h3 id="CO2_title">CO2 level (PPM)</h3>    
+                <p id="CO2_duration"> Meeting duration (hours)</p>
+                <div class="Charts">
+                    <div class="People_X" id="People_CO2" style="list-style-type: none;"></div>
+                    <div>
+                        <table class="chart" id="chart_CO2"></table>        
+                    </div>    
+                </div>
+                <p id="CO2_person"># of people in the meeting room</p>             
             </div>
         </div>
     
-        <div class="Charts_persons">
-            <p id="Risk_person"># of people in the meeting room</p>
-            <p id="CO2_person"># of people in the meeting room</p>             
-        </div>    
+        <!-- <div class="Charts_persons">
+        </div>     -->
 
     </div>
 
