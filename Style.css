@@ -3,7 +3,14 @@ body {
     display: flex; 
     background-color: rgb(195, 212, 235, 9%)
 }
-
+@media only screen and (min-width: 1200px) {
+    #CO2_div{
+        width:20%;
+        display: inline-block;
+        float: right;
+/*     margin-top: -10px; */
+    }
+}
 :root {
   --v: 100px;
 }
@@ -44,7 +51,8 @@ body {
 /*     margin-left: calc(50px + var(--v)); */
 }
 #App_title{
-    margin-left: calc(-30px + var(--v));      
+    margin-left: calc(-30px + var(--v));    
+    
 }
 #Form {
     width: 100%;
@@ -110,15 +118,6 @@ body {
     background-color: rgb(255, 255, 255, 1);    
 }
 /* Visualization page */
-.Visualization {
-/*     margin-top: 30px; */
-/*     margin-left: calc(10px + var(--v)); */
-    margin-top: 0%;
-    /*     padding: 0%; */
-        width: 70%;
-    height: 100%;
-    display: inline-block; 
-}
 .Container {
 /*     margin-top: 30px; */
     width: 100%;
@@ -132,7 +131,19 @@ body {
     height: 100%;
     position: absolute;
 }
-
+.Visualization {
+/*     margin-top: 30px; */
+/*     margin-left: calc(10px + var(--v)); */
+/*     margin-left: 200px; */
+    margin-top: 20px;
+    display: inline-block; 
+/*     border: 1px solid;  */
+/*     float: center; */
+    padding-left: 2%;
+    width: 60%;
+    height: 100%;
+/*     display: inline-block;  */
+}
 .People_X, li{
     width: 10px;
     height: 10px;
@@ -145,13 +156,13 @@ body {
 .Charts_duration{
     width: 100%;    
 }
-.charts{
-    width: 100%;
+/* .charts{
+    width: 50%;
     height: 400px;
     margin: 0%;
 /*     margin-left: 185px; */
 /*     margin-top: 20px; */
-}
+} */
 .Charts_persons{
     margin-top:460px;
     width: 100%
@@ -182,26 +193,27 @@ table {
 /* _________________________ */
 /* Risk style */
 #Risk_title{
-    width:50%;
+    width:500px;
     display: inline-block; 
 /*     border: 1px solid;  */
-    float: left;
-    margin-left: 100px;
+/*     float: left; */
+    margin-left: 40px;
 }
 #Risk_duration{
-    width:50%;
+    width:500px;
     display: inline-block; 
 /*     border: 1px solid;  */
-    float: left;
-    margin-left: 100px;
+/*     float: left; */
+    margin-left: 40px;
+    margin-bottom: -10px;
 }
 #Risk_div{
     width:50%;
     display: inline-block; 
 /*     border: 1px solid;  */
     float: left;
-    margin-top: -10px;
-    margin-left: 60px;
+/*     margin-top: -10px; */
+/*     margin-left: 60px; */
 
 }
 #People_risk{
@@ -228,7 +240,7 @@ table {
 /*     margin-bottom: -70px; */
 /* } */
 #chart_risk{
-    width:30%;
+    width:50%;
     display: inline-block; 
 /*     border: 1px solid;  */
 /*     float: left; */
@@ -236,32 +248,34 @@ table {
 
 }
 #Risk_person{
-    width:50%;
-    display: inline-block; 
+    width:500px;
+/*     display: inline-block;  */
 /*     border: 1px solid;  */
     float: left;
-/*     margin-top:; */
-    margin-left: 100px;
+    margin-top: 470px;
+    margin-left: 40px;
 }
 
 /* CO2 style */
 #CO2_title{
-    width:25%;
+    width:500px;
     display: inline-block; 
 /*     border: 1px solid; */
 /*     margin-top: -150px; */
-/*     margin-left: 900px; */
+    margin-left: 40px;
 }
 #CO2_duration{
-    width:25%;
+    width:500px;
     display: inline-block; 
 /*     border: 1px solid; */
-/*     margin-left: 900px; */
+    margin-left: 40px;
+    margin-bottom: -10px;
 }
 #CO2_div{
-    width:39%;
-    display: inline-block; 
-    margin-top: -10px;
+    width:20%;
+/*     display: inline-block;  */
+/*     float: right; */
+/*     margin-top: -10px; */
 }
 #People_CO2{
     display: inline-block; 
@@ -281,14 +295,16 @@ table {
 /*     margin-top: -680px; */
 }
 #chart_CO2 {
-    width:30%;
+    width:50%;
     /* margin-top: -10px; */
      display: inline-block; 
 /*     margin-left: 5%; */
 }
 #CO2_person{
-    width:25%;
-    display: inline-block; 
+    width:500px;
+    margin-top: 470px;
+    margin-left: 40px;
+/*     display: inline-block;  */
 }
 
 /* _________________________ */
