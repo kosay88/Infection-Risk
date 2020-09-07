@@ -43,16 +43,19 @@ body {
     display: inline-block;
 /*     margin-left: calc(50px + var(--v)); */
 }
+#App_title{
+    margin-left: calc(-30px + var(--v));      
+}
 #Form {
     width: 100%;
     margin-top: 20px;
-    margin-left: calc(10px + var(--v));    
+    margin-left: calc(-30px + var(--v));    
     padding: 10px 15px 15px 0px;
     background-color: rgb(255, 255, 255, 1);
     font-size: 15px;
 }
 .Inputs_divs{
-    width: 200px;
+    width: 180px;
     margin: 5px 0px 0px 20px;
     display:inline-block;
 }
@@ -75,7 +78,7 @@ body {
     width: 100%;
 /*     height: 100%; */
     margin-top: 20px;
-    margin-left: calc(10px + var(--v));
+    margin-left: calc(-30px + var(--v));
     padding: 0px 15px 15px 0px;
     background-color: rgb(255, 255, 255, 1);
         
