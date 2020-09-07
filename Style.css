@@ -3,11 +3,12 @@ body {
     display: flex; 
     background-color: rgb(195, 212, 235, 9%)
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1350px) {
     #CO2_div{
         width:20%;
         display: inline-block;
         float: right;
+        margin-left: 0px
 /*     margin-top: -10px; */
     }
 }
@@ -139,7 +140,7 @@ body {
     display: inline-block; 
 /*     border: 1px solid;  */
 /*     float: center; */
-    padding-left: 2%;
+/*     padding-left: 20px; */
     width: 60%;
     height: 100%;
 /*     display: inline-block;  */
@@ -198,6 +199,7 @@ table {
 /*     border: 1px solid;  */
 /*     float: left; */
     margin-left: 40px;
+    margin-bottom: 0px;
 }
 #Risk_duration{
     width:500px;
@@ -213,7 +215,7 @@ table {
 /*     border: 1px solid;  */
     float: left;
 /*     margin-top: -10px; */
-/*     margin-left: 60px; */
+    margin-left: 60px;
 
 }
 #People_risk{
@@ -263,6 +265,7 @@ table {
 /*     border: 1px solid; */
 /*     margin-top: -150px; */
     margin-left: 40px;
+    margin-bottom: 0px;
 }
 #CO2_duration{
     width:500px;
@@ -276,6 +279,7 @@ table {
 /*     display: inline-block;  */
 /*     float: right; */
 /*     margin-top: -10px; */
+    margin-left: 60px;
 }
 #People_CO2{
     display: inline-block; 
