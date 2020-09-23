@@ -312,6 +312,43 @@ table {
 }
 
 /* _________________________ */
+/* Report style: */
+.Report_viz{
+    margin-top: 50px;
+}
+.room {
+    width:100%;
+    height: 500px;
+    display: block;
+/*     position: relative; */
+/*     text-align:center */
+}
+.Risk_div {
+    width: 50%;
+    height: 500px;
+    display: inline-block; 
+    float: left;
+}
+.CO2_div {
+    width: 50%;
+    height: 500px;
+    display: inline-block; 
+    float: right;
+}
+.Info_div {
+    width: 100%;
+    height: 200px;
+    display: block;
+}
+
+.table_risk {
+    margin-left: 10px
+}
+.table_co2 {
+    margin-left: 10px
+}
+
+/* _________________________ */
 /* Charts colors: */
 .color1, td{
     color: rgb(0, 0, 0, 0%);
