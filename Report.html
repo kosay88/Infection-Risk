@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="./Style.css">
+    <link rel="stylesheet" href="http://localhost:8000/Style.css">
+    
+    <script src="html2canvas.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+    
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>              
+    <script src="./Report.JS"></script>
+    <script src="./html2canvas.min.js"></script>
+    <script src="./html2canvas.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    <script type="module" src="./DownloadReport.JS"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+
+     <script src= 
+        "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"> 
+     </script> 
+       
+     <script src= 
+        "https://files.codepedia.info/files/uploads/iScripts/html2canvas.js"> 
+     </script>
+    <title>Infection Risk</title>
+</head>
+<body onload="CreateChartReport(); ">
+    <div class="Report">
+        <div class="Report_menu">
+            <img id="Report_logo" src="/DEERNS LOGOwit.png" alt="">
+            <a class="active" href="Index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+            <a class="active" id="btn-Convert-Html2Image" href="" onclick="ImgSave();"><i class="fas fa-save"></i> Download</a>
+        </div>
+ 
+        <!-- <div id="testdiv" style="height: 200px; width: 500px; color: red; background-color: royalblue;">
+            <h2>Shapes</h2> 
+            <p>A rectangle with a black border. 
+             In the background is a pink circle. 
+             Partially overlaying the <a href="http://en.wikipedia.org/wiki/Circle" onfocus="drawCircle();" onblur="drawPicture();">circle</a>. 
+             Partially overlaying the circle is a green 
+             <a href="http://en.wikipedia.org/wiki/Square" onfocus="drawSquare();" onblur="drawPicture();">square</a> 
+             and a purple <a href="http://en.wikipedia.org/wiki/Triangle" onfocus="drawTriangle();" onblur="drawPicture();">triangle</a>,
+             both of which are semi-opaque, so the full circle can be seen underneath.</p> 
+        </div>
+        <button onclick="capture();">test</button>
+        <div id="convert_view" style="height: 200px; width: 500px;"></div>
+        <img id="imgtest" src="" alt="" style="height: 200px; width: 500px;">
+        <a href="#" class="button" id="btn-download" download="my-file-name.png">Download</a> -->
+
+        <div class="Report_viz" id="Report_viz">
+            <div id="Cover"></div>
+        
+            <div id="Report" class="googoose-wrapper"></div>
+        </div>
+        </canvas>
+    
+        <div id="elementH"></div>
+    </div>
+
+    <script src="./Report.JS"></script>
+    <script type="module" src="./DownloadReport.JS"></script>
+    <script src="./Index.JS"></script>
+</body>
+</html>
