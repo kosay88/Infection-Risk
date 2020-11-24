@@ -1,8 +1,9 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    /* display: flex;  */
+/*     display: flex;  */
     background-color: rgb(195, 212, 235, 9%);
-    width: 98%;
+    width: 99%;
+/*     height: 100%; */
 }
 @media only screen and (min-width: 1350px) {
     #CO2_div{
@@ -14,74 +15,107 @@ body {
     }
 }
 :root {
-  --v: 100px;
+  --v: 70px;
 }
 
 /*   margin-left: calc(-1 * var(--v)); */
 .Menu{
-    width: var(--v);
-    height: 100vh;
-    padding: 10px 20px 10px 10px;
+    width: 100%;
+    height: var(--v);
+    padding: 0px 0px 0px 0px;
     margin: 0%;
-    display: inline-block; 
-    float: left;
     background-color: rgb(0, 71, 186, 1);
-    color: rgb(255, 255, 255, 1); 
+    color: rgb(255, 255, 255, 1);
 }
-#Logo{
-  width: 100%;
-  margin: 20px 0px 20px 0px;
+.Logo{
+    margin: 20px 0px 0px 50px;
+    width: 100px;
 }
 .Menu a{
+    margin: 20px 20px 0px -20px;
     color: rgb(255, 255, 255, 1);
-  float: left;
-  padding: 10px;
-  text-decoration: none;
-  font-size: 15px;
+    float: right;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 15px;
 }
 .Menu a:hover {
   color: rgb(255, 255, 255, 50%);
 }
 
+.Footer{
+    text-align: center;
+    color: rgb(255, 255, 255, 1);
+    background-color: rgb(0, 71, 186, 1);
+    height: 100px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.Footer h4{
+    margin: 15px 0px 0px 0px;
+    padding: 0px;
+}
+.Footer h5{
+    margin: 10px 0px 0px 0px;
+    padding: 0px;
+}
 /* Home page */
 .Home_content {
     margin-top: 0%;
-    /*     padding: 0%; */
-    width: 70%;
-    height: 100%;
+    padding: 0px 100px 0px 100px;
+/*     width: 90%; */
+    height: 550px;
+    background-image: url("/HomePageImage.png");
+    background-size: contain;
+/*         background-color: black ; */
     display: inline-block;
-/*     margin-left: calc(50px + var(--v)); */
+/*     margin-left: 20px; */
 }
 #App_title{
-    margin-left: calc(-30px + var(--v));    
-    
+    text-align: center;
+/*     margin-left: calc(-30px + var(--v));     */    
+}
+.Form-div{
+    width: 250px;
+    height: 100%;
+    display:inline-block;
 }
 #Form {
-    width: 100%;
-    margin-top: 20px;
+    width: 200px;
+    height: 100%;
+/*     margin-top: 40px; */
     margin-left: calc(-30px + var(--v));    
-    padding: 10px 15px 15px 0px;
-    background-color: rgb(255, 255, 255, 1);
+    padding: 20px 20px 20px 20px;
+    background-color: rgb(255, 255, 255, 90%);
     font-size: 15px;
 }
+.Form-lables{
+    margin: 0px 0px 0px 0px;    
+}
 #Form hr{
-    width:95%;
-    margin-left: 20px;
-    text-align: center;
+    padding: 0px 0px 0px 0px;
+    margin: 15px 0px 15px 0px;
+/*     width:160px; */
+/*     margin-left: 20px; */
+/*     text-align: center; */
 }
 .Inputs_divs{
     width: 180px;
-    margin: 5px 0px 0px 20px;
+    margin: 15px 0px 0px 0px;
     display:inline-block;
 }
 .Inputs_divs input{
-    width: auto;
+    width: 50px;
+    float: right;
+/*     width: auto; */
 }
 #Calculate-btm{
-    width: 150px;
+    width: 180px;
     padding: 5px;
 /*     height: 30px; */
-    margin: 5px 0px 0px 20px;
+    margin: 15px 0px 0px 0px;
     color: rgb(255, 255, 255, 1);
     background-color: rgb(0, 71, 186, 1);
     font-size: 15px;
@@ -90,8 +124,8 @@ body {
     background-color: rgb(100, 118, 132, 1);
 }
 #fileUpload{
-    width: 200px;
-    margin: 5px 0px 0px 20px;
+    width: 180px;
+    margin: 15px 0px 0px 0px;
     display:inline-block;
 }
 #fileUpload::-webkit-file-upload-button {
@@ -102,7 +136,8 @@ body {
     background-color: rgb(100, 118, 132, 1);
 }
 #upload{
-    width: 150px;
+    width: 180px;
+    margin: 15px 0px 0px 0px;
     padding: 5px;
 /*     height: 30px; */
 /*     margin: 5px 0px 0px 20px; */
@@ -115,40 +150,37 @@ body {
 }
 
 .Card_home{
-    width: 100%;
-/*     height: 100%; */
-    margin-top: 20px;
+    width: 60%;
+    height: 100%;
+/*     margin-top: 20px; */
     margin-left: calc(-30px + var(--v));
-    padding: 0px 15px 15px 0px;
-    background-color: rgb(255, 255, 255, 1);
-        
+    padding: 20px 50px 20px 50px;
+    background-color: rgb(255, 255, 255, 90%);
+    display: inline-block;
+    float: right
 }
 .Intro_div{
-    width: 25%;
+/*     width: 25%; */
     height: 100%;
-    margin: 20px 100px 20px 80px;
+    margin: 0px 0px 0px 0px;
     display:inline-block;    
 /*     text-align: top; */
-    background-color: rgb(255, 255, 255, 1);    
+    background-color: rgb(255, 255, 255, 0%);    
 }
 /* .Intro_div p{ */
 /*     font-size: 18px; */
 /* } */
-.Img_div{
+/* .Img_div{
     width: 50%;
-/*     height: 70%; */
     margin: 20px 0px 20px 0px;
     display:inline-block;
     background-color: rgb(255, 255, 255, 1);        
 }
 #Home_Page_Image{
-/*     text-align: center; */
-/*     padding: 0px 15px 0px 15px; */
     width: 70%;
-/*     height: 70%; */
-/*     display:inline-block; */
     background-color: rgb(255, 255, 255, 1);    
-}
+} */
+
 /* Visualization page */
 .Container {
 /*     margin-top: 30px; */
@@ -403,6 +435,9 @@ table {
 .Info_div {
     width: 100%;
     height: 15%;
+    /* border-style: solid; */
+    /* border-color: grey; */
+/*     padding: 0px 0px 0px 0px; */
 /*     padding: 10px ; */
 /*     background-color: rgb(255, 255, 255, 1); */
 /*     margin-top: -1000px; */
