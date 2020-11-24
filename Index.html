@@ -13,10 +13,10 @@
     <script src="Index.JS"></script>
 </head>
 <body>
-    <div>
         <div class="Menu">
             <!-- <h3>Menu</h3> -->
-            <img id="Logo" src="/DEERNS LOGOwit.png" alt="">
+            <img class="Logo" src="/DEERNS LOGOwit.png" alt="">
+            <a class="active" href="Index.html"><i class="fa fa-fw fa-home"></i> Home</a>
             <a class="active" href="Charts.html"><i class="fa fa-bar-chart"></i> To chart</a>
             <!-- <button class="btn" href="Charts.html"><i class="fa fa-home"></i> Home</button> -->
         </div>
@@ -24,36 +24,40 @@
         <div class="Home_content">
             <h1 id="App_title">Infection Risk</h1>
             <!-- <h1>Infection Risk app!</h1> -->
-            <form id="Form" action="/Charts.html">
-                <div class="Inputs_divs">
-                    <label>Room width:</label>
-                    <input id="Room_Width" type="number" min="1" name="Room_width" value="" required>    
-                </div>
-                <div class="Inputs_divs">
-                    <label>Room depth:</label>
-                    <input id="Room_Depth" type="number" min="1" name="Room_depth" value="" required>    
-                </div>
-                <div class="Inputs_divs">
-                    <label>Room height:</label>
-                    <input id="Room_Height" type="number" min="1" name="Room_height" value="" required>    
-                </div>
-                <div class="Inputs_divs">
-                    <label>Ventilation rate:</label>
-                    <input id="Ventilation_Rate" type="number" min="1" name="Ventilation_rate" value="3" required>    
-                </div>
-                <button id="Calculate-btm" type="button" name="submit" value="Submit" onclick="GetInputValues(); location.href='/Charts.html'">Calculate risk</button>
-                
-                <br>
-                <hr>
-
-                <input type="file" id="fileUpload" />
-                <input type="button" id="upload" value="Upload" onclick="Upload(); location.href='/Report.html'" />
-                <div id="dvExcel"></div>
-
-                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.5/xlsx.full.min.js"></script>
-                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.5/jszip.js"></script>
-                <script src="Index.JS"></script>
-            </form>
+            <div class="Form-div">
+                <form id="Form" action="/Charts.html">
+                    <h5 class="Form-lables">Calculate a single room:</h5>
+                    <div class="Inputs_divs">
+                        <label>Room width:</label>
+                        <input id="Room_Width" type="number" min="1" name="Room_width" value="" required>    
+                    </div>
+                    <div class="Inputs_divs">
+                        <label>Room depth:</label>
+                        <input id="Room_Depth" type="number" min="1" name="Room_depth" value="" required>    
+                    </div>
+                    <div class="Inputs_divs">
+                        <label>Room height:</label>
+                        <input id="Room_Height" type="number" min="1" name="Room_height" value="" required>    
+                    </div>
+                    <div class="Inputs_divs">
+                        <label>Ventilation rate:</label>
+                        <input id="Ventilation_Rate" type="number" min="1" name="Ventilation_rate" value="3" required>    
+                    </div>
+                    <button id="Calculate-btm" type="button" name="submit" value="Submit" onclick="GetInputValues(); location.href='/Charts.html'">Calculate risk</button>
+                    
+                    <br>
+                    <hr>
+    
+                    <h5 class="Form-lables">Bulk calculation room:</h5>
+                    <input type="file" id="fileUpload" />
+                    <input type="button" id="upload" value="Upload" onclick="Upload(); location.href='/Report.html';" />
+                    <div id="dvExcel"></div>
+    
+                    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.5/xlsx.full.min.js"></script>
+                    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.5/jszip.js"></script>
+                    <script src="Index.JS"></script>
+                </form>
+            </div>
 
             <div class="Card_home">
                 <div class="Intro_div">
@@ -64,13 +68,15 @@
                         <br><br>
                         Feel free to specify room dimensions and a representative ventilation rate in above boxes to give it a try. Don't know the ventilation rate? Well, 3/hour can be a good first guess.</p>
                 </div>
-                <div class="Img_div">
+                <!-- <div class="Img_div">
                     <img id="Home_Page_Image" src="/HomePageImage.png" alt="">
-                </div>
+                </div> -->
             </div>
         </div>
 
-    </div>
-
+        <div class="Footer">
+            <h4>Contact:</h4>
+            <h5>+31 653 625 951<br>kosay.farag@deerns.com</h5>
+        </div>
 </body>
 </html>

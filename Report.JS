@@ -63,8 +63,6 @@ function round(value, exp) {
     return +(value[0] + 'e' + (value[1] ? (+value[1] - exp) : -exp));
   }
 
-//______________________________________________
-
 // ___________________________________________
 function CreateChartReport() {
     // Change rooms object to an array:
@@ -357,11 +355,11 @@ function CreateChartReport() {
         roomVR.className = "roomVR";
         document.getElementById(InfoId).appendChild(roomVR);
         
-        let canvasroom = document.createElement('div');
-        canvasroom.className = "canvasRoom";
-        let canvasId = "canvas"+index;
-        canvasroom.setAttribute("id", canvasId);
-        document.getElementById('Report').appendChild(canvasroom);
+        let divroom = document.createElement('div');
+        divroom.className = "divRoom";
+        let divId = "div"+index;
+        divroom.setAttribute("id", divId);
+        document.getElementById('Report').appendChild(divroom);
 
         // Download link for each rooms report:
         let DownloadA = document.createElement('a');
@@ -376,10 +374,12 @@ function CreateChartReport() {
         //     doCapture()
         // };
        
+        // Converting each room into a canvas:
         html2canvas(document.querySelector("#"+roomId)).then(canvas => {
-            document.querySelector("#"+canvasId).appendChild(canvas);
+            canvas.className = "canvasRoom";
+            document.querySelector("#"+divId).appendChild(canvas);
             var button = document.getElementById(DownloadAId);
-            var dataURL = canvas.toDataURL('image/png');
+            var dataURL = canvas.toDataURL('image/png', 1);
             button.href = dataURL;
         }).then((value) => {
             // remove room div:
@@ -392,16 +392,21 @@ function CreateChartReport() {
     }
 };
 
-function capture(event){
-    html2canvas(document.querySelector("#room0")).then(canvas => {
-        document.querySelector("#convert_view").appendChild(canvas);
+// Download all rooms on one click:
+$( '#download-btn' ).on( 'click', function( e ) {
+    e.preventDefault();
+    let ad = document.createElement('a');
+    downloadCanvas(this, 'test.png', ad);
+} );
 
-            // download(canvas, 'test');
-        // return Canvas2Image.saveAsImage(canvas, null, null, "png", "InfectionRisk");
-        var mirror = document.getElementById('imgtest');
-        var dataURL = canvas.toDataURL('image/png');
-        mirror.src = dataURL;
-        var button = document.getElementById('btn-download');
-        button.href = dataURL;
-    });
+function downloadCanvas( link, filename, a) {
+    const allCanvas = document.querySelectorAll(".canvasRoom");
+    $(allCanvas).each( function( i ) {
+        var dataUrl = this.toDataURL( 'image/png' )
+        console.log( dataUrl );
+        $(a).attr( {
+            href: this.toDataURL( 'image/png' ),
+            download: filename + i + ".png"
+        } )[0].click();
+    } );
 }

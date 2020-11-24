@@ -63,7 +63,7 @@ function ProcessExcel(data) {
 
     //Read all rows from First Sheet into an JSON array.
     var excelRows = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[firstSheet]);
-    console.log(excelRows);
+    // console.log(excelRows);
 
     // Pass Excel file values to the report page:
     if (typeof(Storage) !== "undefined") {
@@ -72,7 +72,7 @@ function ProcessExcel(data) {
         var ExcelsObj = JSON.parse(sessionStorage.getItem("excel"));//no brackets
         var i;
         for (i = 0; i < ExcelsObj.length; i++) {
-                 console.log(ExcelsObj[i]);
+                //  console.log(ExcelsObj[i]);
         }
     }
 
